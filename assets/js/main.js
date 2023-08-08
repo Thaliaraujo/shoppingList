@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // Atualizar lista no Local Storage ao marcar uma tarefa como concluída ou excluir uma tarefa
 const list = document.querySelector('[data-list]');
 list.addEventListener('click', (event) => {
-  if (event.target.classList.contains('check-button') || event.target.classList.contains('delete-button')) {
+  if (event.target.classList.contains('finish-button') || event.target.classList.contains('delete-button')) {
     saveListToLocalStorage();
   }
 });
