@@ -4,7 +4,7 @@ const finishButton = () => {
     
     finishButton.classList.add('finish-button');
     finishButton.innerText = '';
-
+    
     finishButton.addEventListener('click', productCompleted);
 
     return finishButton;
@@ -19,3 +19,4 @@ const productCompleted = (evento) => {
 };
 
 export default finishButton;
+

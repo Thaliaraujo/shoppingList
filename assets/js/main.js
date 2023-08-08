@@ -1,5 +1,5 @@
 import finishButton from './finishButton.js';
-import buttonDelete from './deleteProduct.js';
+import buttonDelete from './deleteButton.js';
 
 // Função para carregar a lista do Local Storage
 const loadListFromLocalStorage = () => {
