@@ -44,6 +44,5 @@ https://thaliaraujo.github.io/shoppingList/
 <br>
 
 <p>
-<img align="left" width="350px" style="margin-top:-20px" src="https://raw.githubusercontent.com/Thaliaraujo/shoppingList/main/assets/image/shoppingList.png">
+<img align="center" width="600px" style="margin-top:-20px" src="https://raw.githubusercontent.com/Thaliaraujo/shoppingList/main/assets/image/shoppingList.png?token=GHSAT0AAAAAACCYS5F4QQZOMPBXEXDIGLMWZGSRIFQ">
 </p>
-<p>
