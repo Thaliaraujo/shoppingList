@@ -11,6 +11,9 @@ const loadListFromLocalStorage = () => {
   storedList.forEach(item => {
     const product = document.createElement('li');
     product.classList.add('product');
+    if (item.done) { // Adiciona a classe done se o item estiver concluído
+      product.classList.add('done');
+    }
     const text = `<p class="text">${item.value}</p><p class="amount">${item.amount}</p>`;
     product.innerHTML = text;
 
@@ -43,7 +46,7 @@ const saveListToLocalStorage = () => {
     const textElement = item.querySelector('.text');
     const amountElement = item.querySelector('.amount');
     
-    shoppingList.push({ value: textElement.textContent, amount: amountElement.textContent });
+    shoppingList.push({ value: textElement.textContent, amount: amountElement.textContent, done: item.classList.contains('done') }); // Adiciona o atributo done ao objeto
   });
   
   localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
@@ -51,7 +54,7 @@ const saveListToLocalStorage = () => {
 
 // Adicionar evento de clique ao botão de adicionar
 const newProductButton = document.querySelector('[data-form-button]');
-  newProductButton.addEventListener('click', (event) => {
+newProductButton.addEventListener('click', (event) => {
   event.preventDefault();
   
   const input = document.querySelector('[data-form-input]');
@@ -79,3 +82,4 @@ list.addEventListener('click', (event) => {
     saveListToLocalStorage();
   }
 });
+

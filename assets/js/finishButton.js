@@ -15,7 +15,7 @@ const productCompleted = (evento) => {
 
     const completed = finishButton.parentElement;
 
-    completed.classList.toggle('done');
+    completed.classList.toggle('done'); // Alterna a classe done ao clicar no botão
 };
 
 export default finishButton;
