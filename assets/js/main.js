@@ -11,9 +11,6 @@ const loadListFromLocalStorage = () => {
   storedList.forEach(item => {
     const product = document.createElement('li');
     product.classList.add('product');
-    if (item.done) {
-        product.classList.add('done'); // Adiciona a classe 'done' se o item estiver concluído
-    }
     const text = `<p class="text">${item.value}</p><p class="amount">${item.amount}</p>`;
     product.innerHTML = text;
 
@@ -32,16 +29,10 @@ const createProduct = (value, amount) => {
   const text = `<p class="text">${value}</p><p class="amount">${amount}</p>`;
   product.innerHTML = text;
 
-  const newItem = { value, amount, done: false }; // Define o estado de conclusão como false
-  const shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
-  shoppingList.push(newItem);
-  localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
-
   product.appendChild(finishButton());
   product.appendChild(buttonDelete());
   list.appendChild(product);
 };
-
 
 // Função para salvar a lista no Local Storage
 const saveListToLocalStorage = () => {
